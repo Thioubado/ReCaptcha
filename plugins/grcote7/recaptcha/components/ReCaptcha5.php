@@ -29,9 +29,14 @@ class ReCaptcha5 extends ComponentBase
 		return [];
 	}
 
-	public function onSubscribe()
+	public function onRun()
 	{
-		// Here code for submision...
-		$this->page['result'] = 'Screen after submit...';
+		$this->addJs(['$/grcote7/recaptcha/components/recaptcha5/assets/js/onsubmit.js']);
+	}
+
+	public function onSubmit()
+	{
+		// Here form traitment...
+		$this->page['result'] = 777;
 	}
 }
